@@ -1,0 +1,30 @@
+* {
+    height: 100%;
+    color: #ffffff;
+    background-color: #000000;
+    margin: 0px;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.core-connector-red {
+    fill:url(#SVGID_1_);
+}
+
+.core-connector-blue {
+    fill:url(#SVGID_2_);
+}
+
+.map-unselected-country {
+    fill:#595959;
+}
+
+.country-red {
+    fill:#fe0000;
+}
+
+.country-black {
+    fill: #1c1c1c;
+}
