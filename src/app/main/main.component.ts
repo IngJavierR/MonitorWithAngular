@@ -8,35 +8,52 @@ import { Component, OnInit } from '@angular/core';
 export class MainComponent implements OnInit {
 
   alarms: any[];
-  //countryVeracruz = 'country-red';
-  //coreConnector = 'core-connector-red';
+  countryYucatan: string;
+  coreConnector: string;
+  repIt: string;
+  alarmedConnectorAnimation: string;
+  alarmBoxAnimation: string;
   constructor() {
-    
   }
 
   ngOnInit() {
-
+    this.repIt = 'core-connector-blue';
   }
 
   changeStyle() {
     this.changeConnector();
     this.changeCountryColor();
+    this.alarmed();
   }
 
   changeConnector() {
-    /*if(this.coreConnector === 'core-connector-red') {
-      this.coreConnector = 'core-connector-blue';
+    if(this.repIt === 'core-connector-red alarm-box-animation') {
+      this.repIt = 'core-connector-blue';
     }else {
-      this.coreConnector = 'core-connector-red';
-    }*/
+      this.repIt = 'core-connector-red alarm-box-animation';
+    }
   }
 
   changeCountryColor() {
-    /*if(this.countryVeracruz === 'country-red') {
-      this.countryVeracruz = 'country-black';
+    if(this.countryYucatan === 'country-red alarm-box-animation') {
+      this.countryYucatan = 'country-black';
     }else {
-      this.countryVeracruz = 'country-red';
-    }*/
+      this.countryYucatan = 'country-red alarm-box-animation';
+    }
+  }
+
+  alarmed() {
+    if(this.alarmedConnectorAnimation === 'alarmed-connector-animation') {
+      this.alarmedConnectorAnimation = '';
+    }else {
+      this.alarmedConnectorAnimation = 'alarmed-connector-animation';
+    }
+
+    if(this.alarmBoxAnimation === 'alarm-box-animation') {
+      this.alarmBoxAnimation = '';
+    }else {
+      this.alarmBoxAnimation = 'alarm-box-animation';
+    }
   }
 
 }
