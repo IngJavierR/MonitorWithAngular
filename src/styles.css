@@ -10,3 +10,10 @@ html {
 mat-toolbar {
     background: #000000 !important;
 }
+
+.custom-modalbox mat-dialog-container{
+    padding: 0%;
+    background: #000000;
+    border: #595959 1px solid;
+    width: 300px;
+ }

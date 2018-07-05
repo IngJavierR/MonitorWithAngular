@@ -13,12 +13,16 @@ import { MatToolbarModule,
         MatIconModule,
         MatInputModule,
         MatProgressBarModule,
-        MatSnackBarModule } from '@angular/material';
+        MatSnackBarModule,
+        MatDialogModule,
+        MatCardModule,
+        MatGridListModule } from '@angular/material';
 
 import { APP_PROVIDERS } from './app.providers';
 import { MainComponent } from './main/main.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { ShowDescriptionComponent } from './show-description/show-description.component';
 
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -28,7 +32,10 @@ export const MATERIAL_COMPONENTS = [
   MatIconModule,
   MatInputModule,
   MatProgressBarModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatDialogModule,
+  MatCardModule,
+  MatGridListModule
 ]
 
 @NgModule({
@@ -36,7 +43,8 @@ export const MATERIAL_COMPONENTS = [
     AppComponent,
     MainComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    ShowDescriptionComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +55,7 @@ export const MATERIAL_COMPONENTS = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ShowDescriptionComponent]
 })
 export class AppModule { }

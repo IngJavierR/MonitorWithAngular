@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material';
+import { ShowDescriptionComponent } from '../show-description/show-description.component';
 
 @Component({
   selector: 'app-main',
@@ -13,7 +15,7 @@ export class MainComponent implements OnInit {
   repIt: string;
   alarmedConnectorAnimation: string;
   alarmBoxAnimation: string;
-  constructor() {
+  constructor(private dialog: MatDialog) {
   }
 
   ngOnInit() {
@@ -24,6 +26,20 @@ export class MainComponent implements OnInit {
     this.changeConnector();
     this.changeCountryColor();
     this.alarmed();
+    this.openAlarm();
+  }
+
+  openAlarm() {
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.position = {
+      bottom: '0',
+      right: '0'
+    };
+    dialogConfig.panelClass = 'custom-modalbox';
+    this.dialog.open(ShowDescriptionComponent, dialogConfig);
   }
 
   changeConnector() {
