@@ -24,6 +24,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ShowDescriptionComponent } from './show-description/show-description.component';
 import { CircularProgressComponent } from './circular-progress/circular-progress.component';
+import { IncidentChartComponent } from './incident-chart/incident-chart.component';
 
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -46,7 +47,8 @@ export const MATERIAL_COMPONENTS = [
     AboutComponent,
     ContactComponent,
     ShowDescriptionComponent,
-    CircularProgressComponent
+    CircularProgressComponent,
+    IncidentChartComponent
   ],
   imports: [
     BrowserModule,
