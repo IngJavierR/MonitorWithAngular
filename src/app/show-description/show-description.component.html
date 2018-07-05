@@ -1,0 +1,35 @@
+<mat-card>
+  <mat-card-title>
+    <div class="alarm-desc-title">USO W</div>
+  </mat-card-title>
+  <mat-card-content>
+      <div class="container-row">
+        <img src="../assets/icon-04a.svg" />
+        <div>10% de capacidad</div>
+        <img src="../assets/ok.svg" />
+      </div>
+      <div class="container-row">
+        <img src="../assets/icon-03.svg" />
+        <div>10% de capacidad</div>
+        <img src="../assets/ok.svg" />
+      </div>
+      <div class="container-row">
+        <img src="../assets/icon-02.svg" />
+        <div>90% de capacidad</div>
+        <img src="../assets/ko.svg" />
+      </div>
+      <div class="container-row container-left">
+        <app-circular-progress [value]="50"></app-circular-progress>
+        <img src="../assets/icon-01.svg" />
+        <div>Error Yucatan</div>
+      </div>
+      <div class="container-row container-left">
+        <app-circular-progress [value]="75"></app-circular-progress>
+        <img src="../assets/icon-01.svg" />
+        <div>Temperatura alta</div>
+      </div>
+  </mat-card-content>	
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="close()">Close</button>
+  </mat-card-actions>
+</mat-card>

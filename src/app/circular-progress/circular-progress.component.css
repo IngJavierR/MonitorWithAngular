@@ -1,0 +1,20 @@
+.circle {
+    fill:transparent;
+    stroke:#fe0000;
+    stroke-linecap:round;
+    transform:rotate(-90deg);
+    transform-origin: 50% 91%;
+}
+
+@keyframes circleAppears {
+    0% {
+        transform: translate(-18px, -20px);
+    }
+    100% {
+        transform: translate(18px, 0);
+    }
+}
+
+.circle-stroke-move {
+    animation: circleAppears 5s;
+}

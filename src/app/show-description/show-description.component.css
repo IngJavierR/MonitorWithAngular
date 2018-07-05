@@ -1,0 +1,30 @@
+* {
+    height: 100%;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.alarm-desc-title {
+    color: #fe0000;
+    text-align: center;
+}
+
+.container-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    margin: 10px 0px 10px 0px;
+}
+
+.container-row * {
+    margin: auto 0;
+}
+
+.container-row div {
+    width: 130px;
+}
+
+.container-left {
+    justify-content: space-between;
+}
