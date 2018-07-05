@@ -25,6 +25,19 @@
     fill:url(#SVGID_BLUE_INVERSE_);
 }
 
+.core-connector-text {
+    font-family:'Geneva'; 
+    font-size:18;
+}
+
+.core-connector-text_red {
+    fill:#fe0000;
+}
+
+.core-connector-text_white {
+    fill:#FFFFFF; 
+}
+
 .map-unselected-country {
     fill:#595959;
 }

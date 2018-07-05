@@ -125,40 +125,40 @@
         </g>
         <g>
             <polygon class="core-connector-blue_inverse" points="447.85,428.609 269.229,495.312 269.229,508.986 		"/>
-            <text transform="matrix(1 0 0 1 221.4634 509.3926)" style="fill:#FFFFFF; font-family:'Geneva'; font-size:18;">CNT</text>
+            <text transform="matrix(1 0 0 1 221.4634 509.3926)" class="core-connector-text core-connector-text_white">CNT</text>
         </g>
         <g>
             <polygon class="core-connector-blue_inverse" points="447.85,411.989 269.229,435.111 269.229,448.786 		"/>
-            <text transform="matrix(1 0 0 1 220.5757 449.2363)" style="fill:#FFFFFF; font-family:'Geneva'; font-size:18;">NRO</text>
+            <text transform="matrix(1 0 0 1 220.5757 449.2363)" class="core-connector-text core-connector-text_white">NRO</text>
         </g>
         <g>
             <polygon class="core-connector-blue_inverse" points="447.85,393.522 269.229,375.539 269.229,389.213 		"/>
-            <text transform="matrix(1 0 0 1 221.1206 389.0796)" style="fill:#FFFFFF; font-family:'Geneva'; font-size:18;">VPN</text>
+            <text transform="matrix(1 0 0 1 221.1206 389.0796)" class="core-connector-text core-connector-text_white">VPN</text>
         </g>
         <g>
             <polygon class="core-connector-blue_inverse" points="447.85,375.795 269.229,315.507 269.229,329.181 		"/>
-            <text transform="matrix(1 0 0 1 201.6968 328.9233)" style="fill:#FFFFFF; font-family:'Geneva'; font-size:18;">RED IT</text>
+            <text transform="matrix(1 0 0 1 201.6968 328.9233)" class="core-connector-text core-connector-text_white">RED IT</text>
         </g>
         <g>
             <polygon class="core-connector-blue" points="524.229,428.609 702.85,495.312 702.85,508.986 		"/>
-            <text transform="matrix(1 0 0 1 709.4639 509.3926)" style="fill:#FFFFFF; font-family:'Geneva'; font-size:18;">TPE</text>
+            <text transform="matrix(1 0 0 1 709.4639 509.3926)" class="core-connector-text core-connector-text_white">TPE</text>
         </g>
         <g>
             <polygon class="core-connector-blue" points="524.229,411.989 702.85,435.111 702.85,448.786 		"/>
-            <text transform="matrix(1 0 0 1 709.4639 449.2363)" style="fill:#FFFFFF; font-family:'Geneva'; font-size:18;">BESTEL</text>
+            <text transform="matrix(1 0 0 1 709.4639 449.2363)" class="core-connector-text core-connector-text_white">BESTEL</text>
         </g>
         <g>
             <polygon class="core-connector-blue" points="524.229,393.522 702.85,375.539 702.85,389.213 		"/>
-            <text transform="matrix(1 0 0 1 709.4639 389.0796)" style="fill:#FFFFFF; font-family:'Geneva'; font-size:18;">AXTEL</text>
+            <text transform="matrix(1 0 0 1 709.4639 389.0796)" class="core-connector-text core-connector-text_white">AXTEL</text>
         </g>
         <g>
           <polygon [ngClass]="repIt" points="524.229,375.795 702.85,315.507 702.85,329.181 		"/>
-          <text transform="matrix(1 0 0 1 709.4639 328.1758)" style="fill:#FF0000; font-family:'Geneva'; font-size:18;">REP IT</text>
+          <text transform="matrix(1 0 0 1 709.4639 328.1758)" ngClass="repIt" [ngClass]="repItText">REP IT</text>
         </g>
         
-        <g id="alarm-tree">
-          <text transform="matrix(1 0 0 1 930.8428 263.5693)" style="fill:#FF0000; font-family:'Geneva'; font-size:18;">CNT</text>
-          <text transform="matrix(1 0 0 1 978.2646 88.2358)" style="fill:#FF0000; font-family:'Geneva'; font-size:18;">USO W</text>
+        <g id="alarm-tree" *ngIf="treeAlarmed">
+          <text transform="matrix(1 0 0 1 930.8428 263.5693)" class="core-connector-text core-connector-text_red">CNT</text>
+          <text transform="matrix(1 0 0 1 978.2646 88.2358)" class="core-connector-text core-connector-text_red">USO W</text>
 
           <path class="connector-arrow-red" d="M906.774,262.027l5.213-5.203l-5.203-5.213"/>
           <path class="connector-red" [ngClass]="alarmedConnectorAnimation" d="M911.428,256.75H877.23c-17.997,0-32.586,14.589-32.586,32.586l0,0l0.022,0.115c0,17.997-14.589,32.586-32.586,32.586h-42.05"/>
