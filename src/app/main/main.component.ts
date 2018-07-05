@@ -38,6 +38,7 @@ export class MainComponent implements OnInit {
       bottom: '0',
       right: '0'
     };
+    dialogConfig.hasBackdrop = false;
     dialogConfig.panelClass = 'custom-modalbox';
     this.dialog.open(ShowDescriptionComponent, dialogConfig);
   }
