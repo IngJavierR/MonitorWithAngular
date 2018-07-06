@@ -1,0 +1,9 @@
+@keyframes HeightAnimate {
+    0% {
+        height: 10px;
+    }
+}
+
+.rectangle-height-animation {
+    animation: HeightAnimate 2s;
+}

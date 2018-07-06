@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { range } from 'rxjs';
 
 @Component({
   selector: 'app-incident-chart',
@@ -7,52 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IncidentChartComponent implements OnInit {
 
-  hours: any[];
+  hours: any[] = [];
   constructor() { }
 
   ngOnInit() {
-    this.hours = [
-      {
-        id: 1,
-        hour: '12am',
-        numTickets: 50
-      },
-      {
-        id: 2,
-        hour: '1am',
-        numTickets: 20
-      },
-      {
-        id: 3,
-        hour: '2am',
-        numTickets: 10
-      },
-      {
-        id: 4,
-        hour: '3am',
-        numTickets: 40
-      },
-      {
-        id: 5,
-        hour: '4am',
-        numTickets: 50
-      },
-      {
-        id: 6,
-        hour: '5am',
-        numTickets: 20
-      },
-      {
-        id: 7,
-        hour: '6am',
-        numTickets: 10
-      },
-      {
-        id: 8,
-        hour: '7am',
-        numTickets: 40
-      }
-    ];
+    this.createHours('am');
+    this.createHours('pm');
+  }
+
+  createHours(timeId) {
+    range(0,12).subscribe(x => {
+      this.hours.push({
+        id: x,
+        hour: (x === 0) ? `12${timeId}` : `${x}${timeId}`,
+        numTickets: Math.floor(Math.random() * 100) + 1
+      });
+    });
   }
 
 }
