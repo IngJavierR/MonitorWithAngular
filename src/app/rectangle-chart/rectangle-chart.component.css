@@ -1,6 +1,8 @@
 @keyframes HeightAnimate {
     0% {
         height: 10px;
+        transform: scale(1,-1);
+        transform-origin: bottom;
     }
 }
 

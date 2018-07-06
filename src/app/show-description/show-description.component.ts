@@ -16,8 +16,4 @@ export class ShowDescriptionComponent implements OnInit {
   ngOnInit() {
   }
 
-  close() {
-    this.dialogRef.close();
-  }
-
 }
