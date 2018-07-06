@@ -1,6 +1,15 @@
 * {
     height: 100%;
-    color: #ffffff;
+    color: #039fda;
     background-color: #000000;
     margin: 0px;
+}
+
+.hours-container tr:nth-child(3) td {
+    border-top: 2px solid #039fda;
+}
+
+.white-letters {
+    color: white;
+    text-align: center;
 }

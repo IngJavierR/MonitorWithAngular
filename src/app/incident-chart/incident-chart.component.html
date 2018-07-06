@@ -1,17 +1,28 @@
 <div>
   Tickets de Incidencias
 </div>
+<br>
 <div>
-  <table>
+  <table class="hours-container">
     <tbody>
-      <tr style="height: 100px;">
-        <td>
+      <tr>
+        <td *ngFor="let hour of hours">
+          <div style="text-align: center;">{{hour.numTickets}}</div>
         </td>
         <td></td>
       </tr>
       <tr>
-        <td>12am</td>
-        <td>1am</td>
+        <td *ngFor="let hour of hours">
+          <div>
+            <app-rectangle-chart [value]="hour.numTickets"></app-rectangle-chart>
+          </div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td *ngFor="let hour of hours">
+          <div class="white-letters">{{hour.hour}}</div>
+        </td>
       </tr>
     </tbody>
   </table>
