@@ -5,8 +5,14 @@
     margin: 0px;
 }
 .container {
-    width: 90%;
+    width: 80%;
     margin: 0 5% 0 10%;
+    margin-top: 0%;
+}
+
+.container-map {
+    width: 200px;
+    height: 100px;
 }
 
 .core-connector-red {
