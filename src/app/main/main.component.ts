@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 import { ShowDescriptionComponent } from '../show-description/show-description.component';
+import { ConsumeService } from '../services/consume.service';
 
 @Component({
   selector: 'app-main',
@@ -18,7 +19,8 @@ export class MainComponent implements OnInit {
   alarmBoxAnimation: string;
   repItText: string;
   treeAlarmed: boolean;
-  constructor(private dialog: MatDialog) {
+  constructor(private dialog: MatDialog,
+              private _consumeService: ConsumeService) {
   }
 
   ngOnInit() {
@@ -32,6 +34,15 @@ export class MainComponent implements OnInit {
     this.changeConnector();
     this.changeCountryColor();
     this.alarmed();
+    this.getAlarms();
+  }
+
+  getAlarms() {
+    this._consumeService
+    .getTickets()
+    .subscribe(x => {
+      console.log(x);
+    })
   }
 
   configModal() {

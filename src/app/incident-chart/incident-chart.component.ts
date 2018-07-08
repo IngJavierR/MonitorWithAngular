@@ -17,7 +17,7 @@ export class IncidentChartComponent implements OnInit {
 
   ngOnInit() {
     this._consumeService
-      .getAlarms()
+      .getTickets()
       .subscribe(alarms => {
         this.hours = alarms;
       })
