@@ -17,7 +17,7 @@ export class AboutComponent implements OnInit {
 
   consulta(){
     this._data.setIsLoadingEvent(true);
-    this._consumeService
+    /*this._consumeService
         .getJoke()
         .subscribe((response) => {
             console.log(response);
@@ -27,7 +27,7 @@ export class AboutComponent implements OnInit {
         (err) => {
             console.error(err);
             this._data.setIsLoadingEvent(false);
-        })
+        })*/
     }
 
     raiseNotification() {

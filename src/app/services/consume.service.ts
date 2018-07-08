@@ -8,12 +8,12 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class ConsumeService {
 
-  private _url: string = 'http://api.icndb.com/jokes/random';
+  private _urlBase: string = 'http://127.0.0.1:5000';
   constructor(private _http: HttpClient) { }
 
-  getJoke():Observable<any> {
+  getAlarms(): Observable<any[]> {
     return this._http
-        .get(this._url, {responseType: 'json'})
+        .get<any[]>(`${this._urlBase}/alarms`, {responseType: 'json'})
         .pipe(catchError(this.handleError));
   }
 

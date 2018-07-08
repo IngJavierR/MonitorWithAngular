@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { range } from 'rxjs';
+import { ConsumeService } from '../services/consume.service';
+import { allResolved } from 'q';
 
 @Component({
   selector: 'app-incident-chart',
@@ -9,11 +11,18 @@ import { range } from 'rxjs';
 export class IncidentChartComponent implements OnInit {
 
   hours: any[] = [];
-  constructor() { }
+  constructor(private _consumeService: ConsumeService) { 
+    
+  }
 
   ngOnInit() {
-    this.createHours('am');
-    this.createHours('pm');
+    this._consumeService
+      .getAlarms()
+      .subscribe(alarms => {
+        this.hours = alarms;
+      })
+    //this.createHours('am');
+    //this.createHours('pm');
   }
 
   createHours(timeId) {
