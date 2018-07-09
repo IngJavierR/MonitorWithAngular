@@ -6,22 +6,22 @@
   <table class="hours-container">
     <tbody>
       <tr>
-        <td *ngFor="let hour of hours">
-          <div style="text-align: center;">{{hour.numTickets}}</div>
+        <td *ngFor="let ticket of tickets">
+          <div style="text-align: center;">{{ticket.counter}}</div>
         </td>
         <td></td>
       </tr>
       <tr>
-        <td *ngFor="let hour of hours">
+        <td *ngFor="let ticket of tickets">
           <div>
-            <app-rectangle-chart [value]="hour.numTickets"></app-rectangle-chart>
+            <app-rectangle-chart [value]="ticket.counter"></app-rectangle-chart>
           </div>
         </td>
         <td></td>
       </tr>
       <tr>
-        <td *ngFor="let hour of hours">
-          <div class="white-letters">{{hour.hour}}</div>
+        <td *ngFor="let ticket of tickets">
+          <div class="white-letters">{{ticket.hour}}</div>
         </td>
       </tr>
     </tbody>

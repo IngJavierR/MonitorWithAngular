@@ -1,0 +1,218 @@
+[
+    {
+        "_id": {
+            "$oid": "5b43deb2f445c601ac30beda"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T00",
+        "hour": "12am",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb2f445c601ac30bedd"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T01",
+        "hour": "1am",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30bee0"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T02",
+        "hour": "2am",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30bee3"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T03",
+        "hour": "3am",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30bee6"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T04",
+        "hour": "4am",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30bee9"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T05",
+        "hour": "5am",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30beec"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T06",
+        "hour": "6am",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30beef"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T07",
+        "hour": "7am",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30bef2"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T08",
+        "hour": "8am",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30bef5"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T09",
+        "hour": "9am",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30bef8"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T10",
+        "hour": "10am",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30befb"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T11",
+        "hour": "11am",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30befe"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T12",
+        "hour": "12pm",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30bf01"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T13",
+        "hour": "1pm",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30bf04"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T14",
+        "hour": "2pm",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30bf07"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T15",
+        "hour": "3pm",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30bf0a"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T16",
+        "hour": "4pm",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30bf0d"
+        },
+        "counter": 1,
+        "datetime": "2018-07-09T17",
+        "hour": "5pm",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30bf10"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T18",
+        "hour": "6pm",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30bf13"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T19",
+        "hour": "7pm",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30bf16"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T20",
+        "hour": "8pm",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30bf19"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T21",
+        "hour": "9pm",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30bf1c"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T22",
+        "hour": "10pm",
+        "originday": "2018-07-09T"
+    },
+    {
+        "_id": {
+            "$oid": "5b43deb3f445c601ac30bf1f"
+        },
+        "counter": 0,
+        "datetime": "2018-07-09T23",
+        "hour": "11pm",
+        "originday": "2018-07-09T"
+    }
+]

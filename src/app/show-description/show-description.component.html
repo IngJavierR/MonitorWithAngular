@@ -1,32 +1,89 @@
 <mat-card>
   <mat-card-title>
-    <div class="alarm-desc-title">MAQUETA PRIME</div>
+    <div class="alarm-desc-title">{{deviceInfo[0].summary.deviceName}}</div>
   </mat-card-title>
   <mat-card-content>
       <div class="container-row">
-        <img src="../assets/icon-04a.svg" />
-        <div>10% de capacidad</div>
+        <img src="../assets/fan.svg" />
+        <table>
+          <tbody>
+            <tr>
+              <td *ngFor="let fan of deviceInfo[0].fans.fan">
+                  {{fan.name}}
+              </td>
+            </tr>
+            <tr>
+              <td *ngFor="let fan of deviceInfo[0].fans.fan">
+                  {{fan.operationalStatus}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <img src="../assets/ok.svg"/>
+      </div>
+      <div class="container-row">
+        <img src="../assets/interface.svg" />
+        <table>
+          <tbody>
+            <tr>
+              <td *ngFor="let ipInterface of deviceInfo[0].ipInterfaces.ipInterface">
+                  {{ipInterface.name}}
+              </td>
+            </tr>
+            <tr>
+              <td *ngFor="let ipInterface of deviceInfo[0].ipInterfaces.ipInterface">
+                  {{ipInterface.operationalStatus}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <img src="../assets/ok.svg" />
       </div>
       <div class="container-row">
-        <img src="../assets/icon-03.svg" />
-        <div>10% de capacidad</div>
-        <img src="../assets/ok.svg" />
-      </div>
-      <div class="container-row">
-        <img src="../assets/icon-02.svg" />
-        <div>90% de capacidad</div>
+        <img src="../assets/fuente.svg" />
+        <table>
+          <tbody>
+            <tr>
+              <td *ngFor="let powerSupply of deviceInfo[0].powerSupplies.powerSupply">
+                  {{powerSupply.name}}
+              </td>
+            </tr>
+            <tr>
+              <td *ngFor="let powerSupply of deviceInfo[0].powerSupplies.powerSupply">
+                  {{powerSupply.operationalStatus}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
         <img src="../assets/ko.svg" />
       </div>
-      <div class="container-row container-left">
-        <app-circular-progress [value]="50"></app-circular-progress>
-        <img src="../assets/icon-01.svg" />
-        <div>Error Yucatan</div>
+      <div class="container-row">
+          <img src="../assets/temperature.svg" />
+          <table>
+            <tbody>
+              <tr>
+                <td *ngFor="let sensor of deviceInfo[0].sensors.sensor">
+                    {{sensor.name}}
+                </td>
+              </tr>
+              <tr>
+                <td *ngFor="let sensor of deviceInfo[0].sensors.sensor">
+                    {{sensor.status}}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <img src="../assets/ok.svg" />
       </div>
-      <div class="container-row container-left">
+      <div class="container-row">
+          <img src="../assets/icon-01.svg" />
+          <span>Ip Address:</span>
+          <div>{{deviceInfo[0].summary.ipAddress}}</div>
+      </div>
+      <!--<div class="container-row container-left">
         <app-circular-progress [value]="75"></app-circular-progress>
         <img src="../assets/icon-01.svg" />
         <div>Temperatura alta</div>
-      </div>
+      </div>-->
   </mat-card-content>	
 </mat-card>

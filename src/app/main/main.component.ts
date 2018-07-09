@@ -10,77 +10,92 @@ import { ConsumeService } from '../services/consume.service';
 })
 export class MainComponent implements OnInit {
 
-  dialogConfig: any;
-  //alarms: any[];
   countryYucatan: string;
   repIt: string;
-  state: string;
   stateText: string;
   stateConnector: string;
+  tickets: any[];
   constructor(private dialog: MatDialog,
               private _consumeService: ConsumeService) {
   }
 
   ngOnInit() {
-    this.repIt = 'core-connector-blue';
-    this.state = 'normal';
-    this.stateText = 'text-state-normal';
-    this.stateConnector = 'state-normal';
+    this.getTickets();
+    this.alertar('normal');
   }
 
-  changeStyle() {
-    this.changeConnector();
-    this.changeCountryColor();
-    if(this.state === 'normal'){
-      this.state = 'alarmed'
-    }else{
-      this.state = 'normal'
-    }
-    this.alarmed(this.state);
+  testAlarms() {
     this.getAlarms();
+  }
+
+  getTickets() {
+    this._consumeService
+    .getTickets()
+    .subscribe(x => {
+      this.tickets = x;
+    })
   }
 
   getAlarms() {
     this._consumeService
-    .getTickets()
+    .getAlarms()
     .subscribe(x => {
-      console.log(x);
+      console.log('alarms', x);
+      if(x.length > 0){
+        if(x[0].alarmsDTO.severity === 'CRITICAL'){
+          this.alertar('alarmed');
+        }else{
+          this.alertar('normal');
+        }
+      }
     })
   }
 
-  showDevice(deviceId) {
-    this.configModal();
-    this.dialog.open(ShowDescriptionComponent, this.dialogConfig);
+  alertar(state) {
+    this.changeConnectorState(state);
+    this.changeCountryState(state);
+    this.alarmed(state);
   }
 
-  configModal() {
-    this.dialogConfig = new MatDialogConfig();
-    this.dialogConfig.disableClose = true;
-    this.dialogConfig.autoFocus = true;
-    this.dialogConfig.position = {
+  showDevice(deviceId) {
+    this._consumeService
+    .getDeviceInfo(deviceId)
+    .subscribe(x => {
+      let dialogConfig = this.configModal(x);
+      this.dialog.open(ShowDescriptionComponent, dialogConfig);
+    })
+  }
+
+  configModal(data) {
+    let dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.position = {
       bottom: '0',
       right: '0'
     };
-    this.dialogConfig.hasBackdrop = false;
-    this.dialogConfig.panelClass = 'custom-modalbox';
+    dialogConfig.hasBackdrop = false;
+    dialogConfig.panelClass = 'custom-modalbox';
+    console.log('data', data);
+    dialogConfig.data = data;
+    return dialogConfig;
   }
 
-  changeConnector() {
-    if(this.repIt === 'core-connector-red alarm-box-animation') {
+  changeConnectorState(state) {
+    if(state === 'alarmed') {
+      this.repIt = 'core-connector-red alarm-box-animation';
+      this.showDevice(194255080);
+    }else {
       this.repIt = 'core-connector-blue';
       this.dialog.closeAll();
-    }else {
-      this.repIt = 'core-connector-red alarm-box-animation';
-      this.configModal();
-      this.dialog.open(ShowDescriptionComponent, this.dialogConfig);
     }
   }
 
-  changeCountryColor() {
-    if(this.countryYucatan === 'country-red alarm-box-animation') {
-      this.countryYucatan = 'map-unselected-country';
-    }else {
+  changeCountryState(state) {
+    if(state === 'alarmed') {
       this.countryYucatan = 'country-red alarm-box-animation';
+    }else {
+      this.countryYucatan = 'map-unselected-country';
     }
   }
 

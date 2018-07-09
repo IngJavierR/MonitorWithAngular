@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { range } from 'rxjs';
 import { ConsumeService } from '../services/consume.service';
 import { allResolved } from 'q';
@@ -10,8 +10,8 @@ import { allResolved } from 'q';
 })
 export class IncidentChartComponent implements OnInit {
 
-  hours: any[] = [];
-  constructor(private _consumeService: ConsumeService) { 
+  @Input() tickets: any[];
+  constructor() { 
     
   }
 
@@ -21,11 +21,11 @@ export class IncidentChartComponent implements OnInit {
       .subscribe(alarms => {
         this.hours = alarms;
       })*/
-    this.createHours('am');
-    this.createHours('pm');
+    /*this.createHours('am');
+    this.createHours('pm');*/
   }
 
-  createHours(timeId) {
+  /*createHours(timeId) {
     range(0,12).subscribe(x => {
       this.hours.push({
         id: x,
@@ -33,6 +33,6 @@ export class IncidentChartComponent implements OnInit {
         numTickets: Math.floor(Math.random() * 100) + 1
       });
     });
-  }
+  }*/
 
 }

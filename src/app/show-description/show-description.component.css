@@ -7,6 +7,7 @@
 .alarm-desc-title {
     color: #fe0000;
     text-align: center;
+    font-size: 15px;
 }
 
 .container-row {
@@ -27,4 +28,13 @@
 
 .container-left {
     justify-content: space-between;
+}
+
+table {
+    padding: 5px 5px;
+}
+
+table tr td {
+    border: 1px white solid;
+    text-align: center;
 }

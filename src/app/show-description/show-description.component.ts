@@ -8,12 +8,14 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
 })
 export class ShowDescriptionComponent implements OnInit {
 
+  deviceInfo: any;
   constructor(private dialogRef: MatDialogRef<ShowDescriptionComponent>,
               @Inject(MAT_DIALOG_DATA) data) {
-
+    this.deviceInfo = data;
   }
 
   ngOnInit() {
+    console.log('fans', this.deviceInfo[0].fans.fan);
   }
 
 }

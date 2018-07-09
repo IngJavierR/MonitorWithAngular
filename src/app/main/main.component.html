@@ -1,5 +1,5 @@
 <div>
-  <button mat-raised-button color="primary" (click)="changeStyle()">Change</button>
+  <button mat-raised-button color="primary" (click)="testAlarms()">Change</button>
 </div>
 <div>
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -158,7 +158,7 @@
         
         <g id="alarm-tree">
           <text transform="matrix(1 0 0 1 930.8428 263.5693)" class="core-connector-text" [ngClass]="stateText">CNT</text>
-          <text transform="matrix(1 0 0 1 978.2646 88.2358)" class="hand-cursor core-connector-text" [ngClass]="stateText" (click)="showDevice('maqueta')">MAQUETA</text>
+          <text transform="matrix(1 0 0 1 978.2646 88.2358)" class="hand-cursor core-connector-text" [ngClass]="stateText" (click)="showDevice(194255080)">MAQUETA</text>
 
           <path class="connector-arrow" [ngClass]="stateConnector" d="M906.774,262.027l5.213-5.203l-5.203-5.213"/>
           <path class="alarmed-connector-animation connector-line" [ngClass]="stateConnector" d="M911.428,256.75H877.23c-17.997,0-32.586,14.589-32.586,32.586l0,0l0.022,0.115c0,17.997-14.589,32.586-32.586,32.586h-42.05"/>
@@ -2903,5 +2903,5 @@
 </svg>
 </div>
 <div>
-  <app-incident-chart></app-incident-chart>
+  <app-incident-chart [tickets]="tickets"></app-incident-chart>
 </div>
