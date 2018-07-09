@@ -18,10 +18,10 @@ export class ConsumeService {
         .pipe(catchError(this.handleError));
   }
 
-  getAlarms(): Observable<any[]> {
+  getAlarms(time): Observable<any[]> {
     return this._http
         //.get<any[]>(`${this._urlBase}/alarms`, {responseType: 'json'})
-        .get<any[]>('../assets/alarms.json', {responseType: 'json'})
+        .get<any[]>('../assets/alarms/{time}.json', {responseType: 'json'})
         .pipe(catchError(this.handleError));
   }
 

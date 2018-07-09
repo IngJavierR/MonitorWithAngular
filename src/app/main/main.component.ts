@@ -25,7 +25,7 @@ export class MainComponent implements OnInit {
   }
 
   testAlarms() {
-    this.getAlarms();
+    this.getAlarms(5);
   }
 
   getTickets() {
@@ -36,9 +36,9 @@ export class MainComponent implements OnInit {
     })
   }
 
-  getAlarms() {
+  getAlarms(time) {
     this._consumeService
-    .getAlarms()
+    .getAlarms(time)
     .subscribe(x => {
       console.log('alarms', x);
       if(x.length > 0){
