@@ -11,29 +11,32 @@ import { ConsumeService } from '../services/consume.service';
 export class MainComponent implements OnInit {
 
   dialogConfig: any;
-  alarms: any[];
+  //alarms: any[];
   countryYucatan: string;
-  coreConnector: string;
   repIt: string;
-  alarmedConnectorAnimation: string;
-  alarmBoxAnimation: string;
-  repItText: string;
-  treeAlarmed: boolean;
+  state: string;
+  stateText: string;
+  stateConnector: string;
   constructor(private dialog: MatDialog,
               private _consumeService: ConsumeService) {
   }
 
   ngOnInit() {
-    this.treeAlarmed = false;
     this.repIt = 'core-connector-blue';
-    this.repItText = 'core-connector-text core-connector-text_white';
+    this.state = 'normal';
+    this.stateText = 'text-state-normal';
+    this.stateConnector = 'state-normal';
   }
 
   changeStyle() {
-    this.treeAlarmed = !this.treeAlarmed;
     this.changeConnector();
     this.changeCountryColor();
-    this.alarmed();
+    if(this.state === 'normal'){
+      this.state = 'alarmed'
+    }else{
+      this.state = 'normal'
+    }
+    this.alarmed(this.state);
     this.getAlarms();
   }
 
@@ -45,9 +48,13 @@ export class MainComponent implements OnInit {
     })
   }
 
+  showDevice(deviceId) {
+    this.configModal();
+    this.dialog.open(ShowDescriptionComponent, this.dialogConfig);
+  }
+
   configModal() {
     this.dialogConfig = new MatDialogConfig();
-
     this.dialogConfig.disableClose = true;
     this.dialogConfig.autoFocus = true;
     this.dialogConfig.position = {
@@ -61,36 +68,25 @@ export class MainComponent implements OnInit {
   changeConnector() {
     if(this.repIt === 'core-connector-red alarm-box-animation') {
       this.repIt = 'core-connector-blue';
-      this.repItText = 'core-connector-text core-connector-text_white';
+      this.dialog.closeAll();
     }else {
       this.repIt = 'core-connector-red alarm-box-animation';
-      this.repItText = 'core-connector-text core-connector-text_red';
+      this.configModal();
+      this.dialog.open(ShowDescriptionComponent, this.dialogConfig);
     }
   }
 
   changeCountryColor() {
     if(this.countryYucatan === 'country-red alarm-box-animation') {
-      this.countryYucatan = 'country-black';
+      this.countryYucatan = 'map-unselected-country';
     }else {
       this.countryYucatan = 'country-red alarm-box-animation';
     }
   }
 
-  alarmed() {
-    if(this.alarmedConnectorAnimation === 'alarmed-connector-animation') {
-      this.alarmedConnectorAnimation = '';
-      this.dialog.closeAll();
-    }else {
-      this.alarmedConnectorAnimation = 'alarmed-connector-animation';
-      this.configModal();
-      this.dialog.open(ShowDescriptionComponent, this.dialogConfig);
-    }
-
-    if(this.alarmBoxAnimation === 'alarm-box-animation') {
-      this.alarmBoxAnimation = '';
-    }else {
-      this.alarmBoxAnimation = 'alarm-box-animation';
-    }
+  alarmed(state) {
+    this.stateText = `text-state-${state}`;
+    this.stateConnector = `state-${state}`;
   }
 
 }

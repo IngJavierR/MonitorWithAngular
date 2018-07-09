@@ -125,52 +125,52 @@
         </g>
         <g>
             <polygon class="core-connector-blue_inverse" points="447.85,428.609 269.229,495.312 269.229,508.986 		"/>
-            <text transform="matrix(1 0 0 1 221.4634 509.3926)" class="core-connector-text core-connector-text_white">CNT</text>
+            <text transform="matrix(1 0 0 1 221.4634 509.3926)" class="core-connector-text text-state-normal">CNT</text>
         </g>
         <g>
             <polygon class="core-connector-blue_inverse" points="447.85,411.989 269.229,435.111 269.229,448.786 		"/>
-            <text transform="matrix(1 0 0 1 220.5757 449.2363)" class="core-connector-text core-connector-text_white">NRO</text>
+            <text transform="matrix(1 0 0 1 220.5757 449.2363)" class="core-connector-text text-state-normal">NRO</text>
         </g>
         <g>
             <polygon class="core-connector-blue_inverse" points="447.85,393.522 269.229,375.539 269.229,389.213 		"/>
-            <text transform="matrix(1 0 0 1 221.1206 389.0796)" class="core-connector-text core-connector-text_white">VPN</text>
+            <text transform="matrix(1 0 0 1 221.1206 389.0796)" class="core-connector-text text-state-normal">VPN</text>
         </g>
         <g>
             <polygon class="core-connector-blue_inverse" points="447.85,375.795 269.229,315.507 269.229,329.181 		"/>
-            <text transform="matrix(1 0 0 1 201.6968 328.9233)" class="core-connector-text core-connector-text_white">RED IT</text>
+            <text transform="matrix(1 0 0 1 201.6968 328.9233)" class="core-connector-text text-state-normal">RED IT</text>
         </g>
         <g>
             <polygon class="core-connector-blue" points="524.229,428.609 702.85,495.312 702.85,508.986 		"/>
-            <text transform="matrix(1 0 0 1 709.4639 509.3926)" class="core-connector-text core-connector-text_white">TPE</text>
+            <text transform="matrix(1 0 0 1 709.4639 509.3926)" class="core-connector-text text-state-normal">TPE</text>
         </g>
         <g>
             <polygon class="core-connector-blue" points="524.229,411.989 702.85,435.111 702.85,448.786 		"/>
-            <text transform="matrix(1 0 0 1 709.4639 449.2363)" class="core-connector-text core-connector-text_white">BESTEL</text>
+            <text transform="matrix(1 0 0 1 709.4639 449.2363)" class="core-connector-text text-state-normal">BESTEL</text>
         </g>
         <g>
             <polygon class="core-connector-blue" points="524.229,393.522 702.85,375.539 702.85,389.213 		"/>
-            <text transform="matrix(1 0 0 1 709.4639 389.0796)" class="core-connector-text core-connector-text_white">AXTEL</text>
+            <text transform="matrix(1 0 0 1 709.4639 389.0796)" class="core-connector-text text-state-normal">AXTEL</text>
         </g>
         <g>
           <polygon [ngClass]="repIt" points="524.229,375.795 702.85,315.507 702.85,329.181 		"/>
-          <text transform="matrix(1 0 0 1 709.4639 328.1758)" ngClass="repIt" [ngClass]="repItText">REP IT</text>
+          <text transform="matrix(1 0 0 1 709.4639 328.1758)" class="text-state-normal">REP IT</text>
         </g>
         
-        <g id="alarm-tree" *ngIf="treeAlarmed">
-          <text transform="matrix(1 0 0 1 930.8428 263.5693)" class="core-connector-text core-connector-text_red">CNT</text>
-          <text transform="matrix(1 0 0 1 978.2646 88.2358)" class="core-connector-text core-connector-text_red">USO W</text>
+        <g id="alarm-tree">
+          <text transform="matrix(1 0 0 1 930.8428 263.5693)" class="core-connector-text" [ngClass]="stateText">CNT</text>
+          <text transform="matrix(1 0 0 1 978.2646 88.2358)" class="hand-cursor core-connector-text" [ngClass]="stateText" (click)="showDevice('maqueta')">MAQUETA</text>
 
-          <path class="connector-arrow-red" d="M906.774,262.027l5.213-5.203l-5.203-5.213"/>
-          <path class="connector-red" [ngClass]="alarmedConnectorAnimation" d="M911.428,256.75H877.23c-17.997,0-32.586,14.589-32.586,32.586l0,0l0.022,0.115c0,17.997-14.589,32.586-32.586,32.586h-42.05"/>
+          <path class="connector-arrow" [ngClass]="stateConnector" d="M906.774,262.027l5.213-5.203l-5.203-5.213"/>
+          <path class="alarmed-connector-animation connector-line" [ngClass]="stateConnector" d="M911.428,256.75H877.23c-17.997,0-32.586,14.589-32.586,32.586l0,0l0.022,0.115c0,17.997-14.589,32.586-32.586,32.586h-42.05"/>
 
-          <path class="connector-arrow-red" d="M1007.807,105.726l5.203-5.213l5.213,5.203"/>
-          <path class="connector-red" [ngClass]="alarmedConnectorAnimation" d="M1013.083,101.072v34.197c0,17.997-14.589,32.586-32.586,32.586l0,0l-0.115-0.022c-17.997,0-32.586,14.589-32.586,32.586v42.05"/>
+          <path class="connector-arrow" [ngClass]="stateConnector" d="M1007.807,105.726l5.203-5.213l5.213,5.203"/>
+          <path class="alarmed-connector-animation connector-line" [ngClass]="stateConnector" d="M1013.083,101.072v34.197c0,17.997-14.589,32.586-32.586,32.586l0,0l-0.115-0.022c-17.997,0-32.586,14.589-32.586,32.586v42.05"/>
           
-          <path [ngClass]="alarmBoxAnimation" class="alarm-box-red" d="M770.363,330.104c0,3.313-2.686,6-6,6h-55.765
+          <path class="alarm-box" [ngClass]="stateConnector" d="M770.363,330.104c0,3.313-2.686,6-6,6h-55.765
             c-3.313,0-6-2.687-6-6v-16.765c0-3.313,2.687-6,6-6h55.765c3.314,0,6,2.687,6,6V330.104z"/>
-          <path [ngClass]="alarmBoxAnimation" class="alarm-box-red" d="M982.398,265.669c0,3.313-2.686,6-6,6h-55.765
+          <path class="alarm-box" [ngClass]="stateConnector" d="M982.398,265.669c0,3.313-2.686,6-6,6h-55.765
             c-3.313,0-6-2.687-6-6v-16.765c0-3.313,2.687-6,6-6h55.765c3.314,0,6,2.687,6,6V265.669z"/>
-          <path [ngClass]="alarmBoxAnimation" class="alarm-box-red" d="M1046.307,90.336c0,3.313-2.686,6-6,6h-64.339
+          <path class="alarm-box" [ngClass]="stateConnector" d="M1046.307,90.336c0,3.313-2.686,6-6,6h-64.339
             c-3.313,0-6-2.687-6-6V73.571c0-3.313,2.687-6,6-6h64.339c3.314,0,6,2.687,6,6V90.336z"/>
         </g>
         <g id="vpn-tree">

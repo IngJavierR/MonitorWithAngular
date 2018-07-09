@@ -16,13 +16,13 @@ export class IncidentChartComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._consumeService
+    /*this._consumeService
       .getTickets()
       .subscribe(alarms => {
         this.hours = alarms;
-      })
-    //this.createHours('am');
-    //this.createHours('pm');
+      })*/
+    this.createHours('am');
+    this.createHours('pm');
   }
 
   createHours(timeId) {

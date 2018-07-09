@@ -33,15 +33,7 @@
 
 .core-connector-text {
     font-family:'Geneva'; 
-    font-size:18;
-}
-
-.core-connector-text_red {
-    fill:#fe0000;
-}
-
-.core-connector-text_white {
-    fill:#FFFFFF; 
+    font-size:12px;
 }
 
 .map-unselected-country {
@@ -52,13 +44,12 @@
     fill:#fe0000;
 }
 
-.country-black {
-    fill: #595959;
+.connector-blue {
+    stroke: #019FDA;
 }
 
-.connector-red {
+.connector-line {
     fill:none;
-    stroke:#FF0000;
     stroke-width:2;
     stroke-linecap:round;
     stroke-linejoin:round;
@@ -67,13 +58,32 @@
     stroke-dashoffset: -20;
 }
 
-.connector-arrow-red {
+.connector-arrow {
     fill:none;
-    stroke:#FF0000;
     stroke-width:2;
     stroke-linecap:round;
     stroke-linejoin:round;
     stroke-miterlimit:10;
+}
+
+.text-state-alarmed {
+    fill:#fe0000;
+}
+
+.text-state-normal {
+    fill:#FFFFFF; 
+}
+
+.state-alarmed {
+    stroke:#FF0000;
+}
+
+.state-normal {
+    stroke:#019FDA;
+}
+
+.hand-cursor {
+    cursor: pointer;
 }
 
 @keyframes intermitent-line {
@@ -115,9 +125,8 @@
     animation: intermitent-opacity 1s infinite;
 }
 
-.alarm-box-red {
+.alarm-box {
     fill:none;
-    stroke:#FF0000;
     stroke-width:2;
     stroke-miterlimit:10;
 }
