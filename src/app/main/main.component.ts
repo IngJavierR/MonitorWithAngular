@@ -12,6 +12,8 @@ import { DataService } from '../services/data.service';
 export class MainComponent implements OnInit {
 
   everyMinutes = 5;
+  deviceName = 'MAQUETA_PRIME.att.com.mx';
+  deviceId = 194255080;
   countryYucatan: string;
   repIt: string;
   stateText: string;
@@ -59,7 +61,7 @@ export class MainComponent implements OnInit {
       console.log('alarms', x);
 
       let filteredAlarms = x.filter(x => {
-        return x.alarmsDTO.deviceName == 'MAQUETA_PRIME.att.com.mx';
+        return x.alarmsDTO.deviceName == this.deviceName;
       })
 
       filteredAlarms.forEach((x)=>{
@@ -107,7 +109,7 @@ export class MainComponent implements OnInit {
   changeConnectorState(state) {
     if(state === 'alarmed') {
       this.repIt = 'core-connector-red alarm-box-animation';
-      this.showDevice(194255080);
+      this.showDevice(this.deviceId);
     }else {
       this.repIt = 'core-connector-blue';
       this.dialog.closeAll();
