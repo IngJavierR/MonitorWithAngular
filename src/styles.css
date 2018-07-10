@@ -15,5 +15,5 @@ mat-toolbar {
     padding: 0%;
     background: #000000;
     border: #595959 1px solid;
-    width: 300px;
+    max-width: 400px;
  }

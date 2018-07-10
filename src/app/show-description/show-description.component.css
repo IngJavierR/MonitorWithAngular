@@ -22,10 +22,6 @@
     margin: auto 0;
 }
 
-.container-row div {
-    width: 130px;
-}
-
 .container-left {
     justify-content: space-between;
 }

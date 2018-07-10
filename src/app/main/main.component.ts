@@ -12,8 +12,8 @@ import { DataService } from '../services/data.service';
 export class MainComponent implements OnInit {
 
   everyMinutes = 5;
-  deviceName = 'MAQUETA_PRIME.att.com.mx';
-  deviceId = 194255080;
+  deviceName = 'MEXCOTL3850_106_0_65';
+  deviceId = 194255081;
   countryYucatan: string;
   repIt: string;
   stateText: string;

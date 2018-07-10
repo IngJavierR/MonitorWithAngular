@@ -21,7 +21,7 @@
                 "value": "LINK_DOWN"
             },
             "dateTime": "2018-07-09T16",
-            "deviceName": "MAQUETA_PRIME.att.com.mx",
+            "deviceName": "MEXCOTL3850_106_0_65",
             "deviceTimestamp": "2018-07-09T16:53:05-05:00",
             "lastUpdatedAt": "2018-07-09T16:53:05.496-05:00",
             "message": " Port 'GigabitEthernet1/0/7' (Description: 'Not available') is flapping on device '10.106.225.27'. - Device Name: MXTDF12CAT3k8225_27-1 - Reporting Address: 10.106.225.27",
@@ -54,7 +54,7 @@
                 "value": "LINK_DOWN"
             },
             "dateTime": "2018-07-09T16",
-            "deviceName": "MAQUETA_PRIME.att.com.mx",
+            "deviceName": "MEXCOTL3850_106_0_65",
             "deviceTimestamp": "2018-07-09T16:53:05-05:00",
             "lastUpdatedAt": "2018-07-09T16:53:05.496-05:00",
             "message": " Port 'GigabitEthernet1/0/7' (Description: 'Not available') is flapping on device '10.106.225.27'. - Device Name: MXTDF12CAT3k8225_27-1 - Reporting Address: 10.106.225.27",

@@ -29,12 +29,18 @@
         <table>
           <tbody>
             <tr>
-              <td *ngFor="let ipInterface of deviceInfo[0].ipInterfaces.ipInterface">
+              <td *ngIf="deviceInfo[0].ipInterfaces.ipInterface.name; else elseBlock">
+                  {{deviceInfo[0].ipInterfaces.ipInterface.name}}
+              </td>
+              <td #elseBlock *ngFor="let ipInterface of deviceInfo[0].ipInterfaces.ipInterface">
                   {{ipInterface.name}}
               </td>
             </tr>
             <tr>
-              <td *ngFor="let ipInterface of deviceInfo[0].ipInterfaces.ipInterface">
+              <td *ngIf="deviceInfo[0].ipInterfaces.ipInterface.name; else elseBlock2">
+                  {{deviceInfo[0].ipInterfaces.ipInterface.operationalStatus}}
+              </td>
+              <td #elseBlock2 *ngFor="let ipInterface of deviceInfo[0].ipInterfaces.ipInterface">
                   {{ipInterface.operationalStatus}}
               </td>
             </tr>

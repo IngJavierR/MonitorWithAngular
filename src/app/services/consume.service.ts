@@ -8,7 +8,8 @@ import { catchError } from 'rxjs/operators';
 })
 export class ConsumeService {
 
-  private _urlBase: string = 'http://127.0.0.1:5000';
+  //private _urlBase: string = 'http://127.0.0.1:5000';
+  private _urlBase: string = 'http://7842a141.ngrok.io';
   constructor(private _http: HttpClient) { }
 
   getTickets(): Observable<any[]> {

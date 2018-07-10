@@ -3,20 +3,38 @@
         "fans": {
             "fan": [
                 {
-                    "description": "Switch 1 - WS-C3850-24P - FAN 1",
-                    "name": "Switch 1 - FAN - T1 1",
+                    "description": "Switch 2 - WS-C3850-48P - FAN 3",
+                    "name": "Switch 2 - FAN 3",
                     "operationalStatus": "normal",
                     "vendorEquipmentType": "cevFanCat3kCT57xxFan"
                 },
                 {
-                    "description": "Switch 1 - WS-C3850-24P - FAN 3",
-                    "name": "Switch 1 - FAN - T1 3",
+                    "description": "Switch 2 - WS-C3850-48P - FAN 2",
+                    "name": "Switch 2 - FAN 2",
                     "operationalStatus": "normal",
                     "vendorEquipmentType": "cevFanCat3kCT57xxFan"
                 },
                 {
-                    "description": "Switch 1 - WS-C3850-24P - FAN 2",
-                    "name": "Switch 1 - FAN - T1 2",
+                    "description": "Switch 1 - WS-C3850-48P - FAN 3",
+                    "name": "Switch 1 - FAN 3",
+                    "operationalStatus": "normal",
+                    "vendorEquipmentType": "cevFanCat3kCT57xxFan"
+                },
+                {
+                    "description": "Switch 1 - WS-C3850-48P - FAN 1",
+                    "name": "Switch 1 - FAN 1",
+                    "operationalStatus": "normal",
+                    "vendorEquipmentType": "cevFanCat3kCT57xxFan"
+                },
+                {
+                    "description": "Switch 2 - WS-C3850-48P - FAN 1",
+                    "name": "Switch 2 - FAN 1",
+                    "operationalStatus": "normal",
+                    "vendorEquipmentType": "cevFanCat3kCT57xxFan"
+                },
+                {
+                    "description": "Switch 1 - WS-C3850-48P - FAN 2",
+                    "name": "Switch 1 - FAN 2",
                     "operationalStatus": "normal",
                     "vendorEquipmentType": "cevFanCat3kCT57xxFan"
                 }
@@ -41,16 +59,31 @@
         "powerSupplies": {
             "powerSupply": [
                 {
+                    "description": "Switch 2 - Power Supply A",
+                    "name": "Switch 2 - Power Supply A",
+                    "operationalStatus": "normal",
+                    "serialNumber": "DCA2026GDCR",
+                    "vendorEquipmentType": "cevPowerSupplyCat3kCT57xxC1Pwr715wAc"
+                },
+                {
+                    "description": "Switch 2 - Power Supply B",
+                    "name": "Switch 2 - Power Supply B",
+                    "operationalStatus": "normal",
+                    "serialNumber": "LIT19470VEW",
+                    "vendorEquipmentType": "cevPowerSupplyCat3kCT57xxC1Pwr715wAc"
+                },
+                {
                     "description": "Switch 1 - Power Supply A",
                     "name": "Switch 1 - Power Supply A",
-                    "operationalStatus": "notPresent",
-                    "vendorEquipmentType": "cevPowerSupplyUnknown"
+                    "operationalStatus": "normal",
+                    "serialNumber": "DCA2026GDCP",
+                    "vendorEquipmentType": "cevPowerSupplyCat3kCT57xxC1Pwr715wAc"
                 },
                 {
                     "description": "Switch 1 - Power Supply B",
                     "name": "Switch 1 - Power Supply B",
                     "operationalStatus": "normal",
-                    "serialNumber": "LIT19470W9Y",
+                    "serialNumber": "LIT19470U7H",
                     "vendorEquipmentType": "cevPowerSupplyCat3kCT57xxC1Pwr715wAc"
                 }
             ]
@@ -58,16 +91,7 @@
         "sensors": {
             "sensor": [
                 {
-                    "description": "Switch 1 - WS-C3850-24P - Temp HotSpot Sensor 2",
-                    "equipmentName": "Switch 1",
-                    "name": "Switch 1 - Temp Sensor 2",
-                    "precision": 0,
-                    "status": "OK",
-                    "type": "CELSIUS",
-                    "vendorSensorType": "cevSensorModuleHotSpotTemp"
-                },
-                {
-                    "description": "Switch 1 - WS-C3850-24P - Temp Inlet Sensor 0",
+                    "description": "Switch 1 - WS-C3850-48P - Temp Inlet Sensor 0",
                     "equipmentName": "Switch 1",
                     "name": "Switch 1 - Temp Sensor 0",
                     "precision": 0,
@@ -76,9 +100,45 @@
                     "vendorSensorType": "cevSensorModuleInletTemp"
                 },
                 {
-                    "description": "Switch 1 - WS-C3850-24P - Temp Outlet Sensor 1",
+                    "description": "Switch 2 - WS-C3850-48P - Temp HotSpot Sensor 2",
+                    "equipmentName": "Switch 2",
+                    "name": "Switch 2 - Temp Sensor 2",
+                    "precision": 0,
+                    "status": "OK",
+                    "type": "CELSIUS",
+                    "vendorSensorType": "cevSensorModuleHotSpotTemp"
+                },
+                {
+                    "description": "Switch 1 - WS-C3850-48P - Temp Outlet Sensor 1",
                     "equipmentName": "Switch 1",
                     "name": "Switch 1 - Temp Sensor 1",
+                    "precision": 0,
+                    "status": "OK",
+                    "type": "CELSIUS",
+                    "vendorSensorType": "cevSensorModuleOutletTemp"
+                },
+                {
+                    "description": "Switch 2 - WS-C3850-48P - Temp Inlet Sensor 0",
+                    "equipmentName": "Switch 2",
+                    "name": "Switch 2 - Temp Sensor 0",
+                    "precision": 0,
+                    "status": "OK",
+                    "type": "CELSIUS",
+                    "vendorSensorType": "cevSensorModuleInletTemp"
+                },
+                {
+                    "description": "Switch 1 - WS-C3850-48P - Temp HotSpot Sensor 2",
+                    "equipmentName": "Switch 1",
+                    "name": "Switch 1 - Temp Sensor 2",
+                    "precision": 0,
+                    "status": "OK",
+                    "type": "CELSIUS",
+                    "vendorSensorType": "cevSensorModuleHotSpotTemp"
+                },
+                {
+                    "description": "Switch 2 - WS-C3850-48P - Temp Outlet Sensor 1",
+                    "equipmentName": "Switch 2",
+                    "name": "Switch 2 - Temp Sensor 1",
                     "precision": 0,
                     "status": "OK",
                     "type": "CELSIUS",
@@ -88,18 +148,18 @@
         },
         "summary": {
             "ciscoIdentityCapable": false,
-            "deviceId": 194255080,
-            "deviceName": "MAQUETA_PRIME.att.com.mx",
+            "deviceId": 194255081,
+            "deviceName": "MEXCOTL3850_106_0_65",
             "deviceType": "Cisco Catalyst38xx stack-able ethernet switch",
-            "ipAddress": "10.106.6.160",
+            "ipAddress": "10.106.0.65",
             "locationCapable": false,
-            "nrPortsDown": 23,
-            "nrPortsUp": 1,
+            "nrPortsDown": 74,
+            "nrPortsUp": 22,
             "productFamily": "Switches and Hubs",
-            "reachability": "PING_REACHABLE",
-            "softwareVersion": "16.6.3",
-            "systemTime": "2018-07-09T15:01:14-05:00",
-            "upTime": "+000000008 01:19:30.096000000"
+            "reachability": "REACHABLE",
+            "softwareVersion": "03.06.03.E",
+            "systemTime": "2018-07-10T12:49:21-05:00",
+            "upTime": "+000000293 22:00:55.168000000"
         }
     }
 ]
