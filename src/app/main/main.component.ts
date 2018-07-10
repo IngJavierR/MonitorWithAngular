@@ -11,7 +11,7 @@ import { DataService } from '../services/data.service';
 })
 export class MainComponent implements OnInit {
 
-  everyMinutes = 1;
+  everyMinutes = 5;
   countryYucatan: string;
   repIt: string;
   stateText: string;
