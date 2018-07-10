@@ -48,3 +48,6 @@ mat-sidenav {
     color: #ffc42a;
     border-bottom: 1px inherit solid; 
 }
+.spacer {
+    flex: 1 1 auto;
+}

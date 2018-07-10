@@ -11,7 +11,7 @@ import { DataService } from '../services/data.service';
 })
 export class MainComponent implements OnInit {
 
-  everyMinutes = 5;
+  everyMinutes = 1;
   countryYucatan: string;
   repIt: string;
   stateText: string;
@@ -20,6 +20,9 @@ export class MainComponent implements OnInit {
   constructor(private dialog: MatDialog,
               private _dataService: DataService,
               private _consumeService: ConsumeService) {
+    this._dataService.getIsUpdateAlarms().subscribe(x => {
+      this.testAlarms();
+    });
   }
 
   ngOnInit() {

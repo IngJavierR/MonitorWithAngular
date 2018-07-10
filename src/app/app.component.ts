@@ -5,7 +5,6 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { DataService } from './services/data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { config } from 'rxjs';
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -34,6 +33,10 @@ export class AppComponent {
             duration: 2000
           });
         });
+  }
+
+  updateAlarms() {
+    this._dataService.setUpdateAlarms('ok');
   }
 }
 

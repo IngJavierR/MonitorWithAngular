@@ -10,6 +10,7 @@ export class DataService {
 
   private generalNotificationMessage = new Subject<string>();
   private isLoading = new Subject<boolean>();
+  private updateAlarms = new Subject<string>();
 
   getGeneralNotificationMessage() {
       return this.generalNotificationMessage.asObservable();
@@ -25,6 +26,14 @@ export class DataService {
 
   setIsLoadingEvent(isLoading: boolean){
       this.isLoading.next(isLoading);
+  }
+
+  getIsUpdateAlarms(){
+    return this.updateAlarms.asObservable();
+  }
+
+  setUpdateAlarms(msg: string){
+    this.updateAlarms.next(msg);
   }
 
 }
