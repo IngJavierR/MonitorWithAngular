@@ -1,10 +1,13 @@
+<div>
+  <img class="close-btn" src="./assets/ko.svg" (click)="closeDialog()"/>
+</div>
 <mat-card>
   <mat-card-title>
     <div class="alarm-desc-title">{{deviceInfo[0].summary.deviceName}}</div>
   </mat-card-title>
   <mat-card-content>
       <div class="container-row">
-        <img src="../assets/fan.svg" />
+        <img src="./assets/fan.svg" />
         <table>
           <tbody>
             <tr>
@@ -19,10 +22,10 @@
             </tr>
           </tbody>
         </table>
-        <img src="../assets/ok.svg"/>
+        <img src="./assets/ok.svg"/>
       </div>
       <div class="container-row">
-        <img src="../assets/interface.svg" />
+        <img src="./assets/interface.svg" />
         <table>
           <tbody>
             <tr>
@@ -37,10 +40,10 @@
             </tr>
           </tbody>
         </table>
-        <img src="../assets/ok.svg" />
+        <img src="./assets/ok.svg" />
       </div>
       <div class="container-row">
-        <img src="../assets/fuente.svg" />
+        <img src="./assets/fuente.svg" />
         <table>
           <tbody>
             <tr>
@@ -55,10 +58,10 @@
             </tr>
           </tbody>
         </table>
-        <img src="../assets/ko.svg" />
+        <img src="./assets/ko.svg" />
       </div>
       <div class="container-row">
-          <img src="../assets/temperature.svg" />
+          <img src="./assets/temperature.svg" />
           <table>
             <tbody>
               <tr>
@@ -73,16 +76,16 @@
               </tr>
             </tbody>
           </table>
-          <img src="../assets/ok.svg" />
+          <img src="./assets/ok.svg" />
       </div>
       <div class="container-row">
-          <img src="../assets/icon-01.svg" />
+          <img src="./assets/icon-01.svg" />
           <span>Ip Address:</span>
           <div>{{deviceInfo[0].summary.ipAddress}}</div>
       </div>
       <!--<div class="container-row container-left">
         <app-circular-progress [value]="75"></app-circular-progress>
-        <img src="../assets/icon-01.svg" />
+        <img src="./assets/icon-01.svg" />
         <div>Temperatura alta</div>
       </div>-->
   </mat-card-content>	

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 import { ShowDescriptionComponent } from '../show-description/show-description.component';
 import { ConsumeService } from '../services/consume.service';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-main',
@@ -10,28 +11,39 @@ import { ConsumeService } from '../services/consume.service';
 })
 export class MainComponent implements OnInit {
 
+  everyMinutes = 5;
   countryYucatan: string;
   repIt: string;
   stateText: string;
   stateConnector: string;
   tickets: any[];
   constructor(private dialog: MatDialog,
+              private _dataService: DataService,
               private _consumeService: ConsumeService) {
   }
 
   ngOnInit() {
+    this._dataService.setIsLoadingEvent(true);
     this.getTickets();
+    this.getAlarms(this.everyMinutes);
     this.alertar('normal');
+    setInterval(() => {
+      this._dataService.setIsLoadingEvent(true);
+      this.getTickets();
+      this.getAlarms(this.everyMinutes);
+    }, (this.everyMinutes * 60 * 1000));
   }
 
   testAlarms() {
-    this.getAlarms(5);
+    this.getAlarms(this.everyMinutes);
+    this.getTickets();
   }
 
   getTickets() {
     this._consumeService
     .getTickets()
     .subscribe(x => {
+      this._dataService.setIsLoadingEvent(false);
       this.tickets = x;
     })
   }
@@ -40,14 +52,22 @@ export class MainComponent implements OnInit {
     this._consumeService
     .getAlarms(time)
     .subscribe(x => {
+      this._dataService.setIsLoadingEvent(false);
       console.log('alarms', x);
-      if(x.length > 0){
-        if(x[0].alarmsDTO.severity === 'CRITICAL'){
+
+      let filteredAlarms = x.filter(x => {
+        return x.alarmsDTO.deviceName == 'MAQUETA_PRIME.att.com.mx';
+      })
+
+      filteredAlarms.forEach((x)=>{
+        console.log(x.alarmsDTO.deviceName, x.alarmsDTO.severity);
+        if(x.alarmsDTO.severity === 'CRITICAL'){
           this.alertar('alarmed');
         }else{
           this.alertar('normal');
         }
-      }
+      });
+
     })
   }
 

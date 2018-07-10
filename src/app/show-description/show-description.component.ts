@@ -15,7 +15,11 @@ export class ShowDescriptionComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('fans', this.deviceInfo[0].fans.fan);
+    
+  }
+
+  closeDialog() {
+    this.dialogRef.close();
   }
 
 }

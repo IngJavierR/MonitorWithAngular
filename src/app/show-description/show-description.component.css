@@ -38,3 +38,8 @@ table tr td {
     border: 1px white solid;
     text-align: center;
 }
+
+.close-btn {
+    cursor: pointer;
+    margin-left: 90%;
+}

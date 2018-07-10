@@ -21,7 +21,40 @@
                 "value": "LINK_DOWN"
             },
             "dateTime": "2018-07-09T16",
-            "deviceName": "MXTDF12CAT3k8225_27-1:Interface GigabitEthernet1/0/7",
+            "deviceName": "MAQUETA_PRIME.att.com.mx",
+            "deviceTimestamp": "2018-07-09T16:53:05-05:00",
+            "lastUpdatedAt": "2018-07-09T16:53:05.496-05:00",
+            "message": " Port 'GigabitEthernet1/0/7' (Description: 'Not available') is flapping on device '10.106.225.27'. - Device Name: MXTDF12CAT3k8225_27-1 - Reporting Address: 10.106.225.27",
+            "nttyaddrss7_address": " 10.106.225. 27",
+            "severity": "CLEARED",
+            "source": "10.106.225.27",
+            "timeStamp": "2018-07-09T16:52:28.262-05:00",
+            "wirelessSpecificAlarmId": "LINK_DOWN:10.106."
+        }
+    },
+    {
+        "@dtoType": "alarmsDTO",
+        "@type": "Alarms",
+        "@url": "https://10.106.0.23/webacs/api/v1/data/Alarms/222581631",
+        "_id": {
+            "$oid": "5b43d97df445c616a41407f1"
+        },
+        "alarmsDTO": {
+            "@displayName": "222581631",
+            "@id": "222581631",
+            "acknowledgementStatus": false,
+            "alarmFoundAt": "2018-07-09T16:52:28.262-05:00",
+            "alarmId": 222581631,
+            "category": {
+                "ordinal": 268438038,
+                "value": "Switches and Hubs"
+            },
+            "condition": {
+                "ordinal": -1,
+                "value": "LINK_DOWN"
+            },
+            "dateTime": "2018-07-09T16",
+            "deviceName": "MAQUETA_PRIME.att.com.mx",
             "deviceTimestamp": "2018-07-09T16:53:05-05:00",
             "lastUpdatedAt": "2018-07-09T16:53:05.496-05:00",
             "message": " Port 'GigabitEthernet1/0/7' (Description: 'Not available') is flapping on device '10.106.225.27'. - Device Name: MXTDF12CAT3k8225_27-1 - Reporting Address: 10.106.225.27",
