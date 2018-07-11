@@ -13,7 +13,7 @@
 .container-row {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-content: center;
     margin: 10px 0px 10px 0px;
 }
@@ -38,4 +38,8 @@ table tr td {
 .close-btn {
     cursor: pointer;
     margin-left: 90%;
+}
+
+.txt-space {
+    margin-left: 5px !important;
 }

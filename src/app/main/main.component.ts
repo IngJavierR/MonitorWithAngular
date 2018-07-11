@@ -83,9 +83,11 @@ export class MainComponent implements OnInit {
   }
 
   showDevice(deviceId) {
+    this._dataService.setIsLoadingEvent(true);
     this._consumeService
     .getDeviceInfo(deviceId)
     .subscribe(x => {
+      this._dataService.setIsLoadingEvent(false);
       let dialogConfig = this.configModal(x);
       this.dialog.open(ShowDescriptionComponent, dialogConfig);
     })

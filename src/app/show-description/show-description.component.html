@@ -17,12 +17,12 @@
             </tr>
             <tr>
               <td *ngFor="let fan of deviceInfo[0].fans.fan">
-                  {{fan.operationalStatus}}
+                  <img *ngIf="fan.operationalStatus === 'normal'" src="./assets/ok.svg"/>
+                  <img *ngIf="fan.operationalStatus !== 'normal'" src="./assets/ko.svg"/>
               </td>
             </tr>
           </tbody>
         </table>
-        <img src="./assets/ok.svg"/>
       </div>
       <div class="container-row">
         <img src="./assets/interface.svg" />
@@ -38,15 +38,16 @@
             </tr>
             <tr>
               <td *ngIf="deviceInfo[0].ipInterfaces.ipInterface.operationalStatus">
-                  {{deviceInfo[0].ipInterfaces.ipInterface.operationalStatus}}
+                  <img *ngIf="deviceInfo[0].ipInterfaces.ipInterface.operationalStatus === 'UP'" src="./assets/ok.svg"/>
+                  <img *ngIf="deviceInfo[0].ipInterfaces.ipInterface.operationalStatus !== 'UP'" src="./assets/ko.svg"/>
               </td>
               <td *ngFor="let ipInterface of deviceInfo[0].ipInterfaces.ipInterface">
-                  {{ipInterface.operationalStatus}}
+                  <img *ngIf="ipInterface.operationalStatus === 'UP'" src="./assets/ok.svg"/>
+                  <img *ngIf="ipInterface.operationalStatus !== 'UP'" src="./assets/ko.svg"/>
               </td>
             </tr>
           </tbody>
         </table>
-        <img src="./assets/ok.svg" />
       </div>
       <div class="container-row">
         <img src="./assets/fuente.svg" />
@@ -59,12 +60,12 @@
             </tr>
             <tr>
               <td *ngFor="let powerSupply of deviceInfo[0].powerSupplies.powerSupply">
-                  {{powerSupply.operationalStatus}}
+                  <img *ngIf="powerSupply.operationalStatus === 'normal'" src="./assets/ok.svg"/>
+                  <img *ngIf="powerSupply.operationalStatus !== 'normal'" src="./assets/ko.svg"/>
               </td>
             </tr>
           </tbody>
         </table>
-        <img src="./assets/ko.svg" />
       </div>
       <div class="container-row">
           <img src="./assets/temperature.svg" />
@@ -77,16 +78,16 @@
               </tr>
               <tr>
                 <td *ngFor="let sensor of deviceInfo[0].sensors.sensor">
-                    {{sensor.status}}
+                    <img *ngIf="sensor.status === 'OK'" src="./assets/ok.svg"/>
+                    <img *ngIf="sensor.status !== 'OK'" src="./assets/ko.svg"/>
                 </td>
               </tr>
             </tbody>
           </table>
-          <img src="./assets/ok.svg" />
       </div>
       <div class="container-row">
           <img src="./assets/icon-01.svg" />
-          <span>Ip Address:</span>
+          <span class="txt-space">Ip Address:</span>
           <div>{{deviceInfo[0].summary.ipAddress}}</div>
       </div>
       <!--<div class="container-row container-left">
