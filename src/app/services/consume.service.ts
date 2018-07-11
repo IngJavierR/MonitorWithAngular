@@ -9,7 +9,7 @@ import { catchError } from 'rxjs/operators';
 export class ConsumeService {
 
   //private _urlBase: string = 'http://10.106.7.39:5000';
-  private _urlBase: string = 'http://7842a141.ngrok.io';
+  private _urlBase: string = 'http://ff62ab85.ngrok.io';
   constructor(private _http: HttpClient) { }
 
   getTickets(): Observable<any[]> {
