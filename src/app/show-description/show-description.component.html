@@ -21,6 +21,11 @@
                   <img *ngIf="fan.operationalStatus !== 'normal'" src="./assets/ko.svg"/>
               </td>
             </tr>
+            <tr>
+              <td *ngFor="let fan of deviceInfo[0].fans.fan">
+                {{fan.temp}}º
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>

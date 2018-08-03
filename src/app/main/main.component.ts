@@ -11,7 +11,8 @@ import { DataService } from '../services/data.service';
 })
 export class MainComponent implements OnInit {
 
-  everyMinutes = 5;
+  everyMinutes = 180;
+  //deviceName = '10.106.0.65:MEXCOTL3850_106_0_65';
   deviceName = 'MEXCOTL3850_106_0_65';
   deviceId = 194255081;
   countryYucatan: string;
@@ -61,7 +62,7 @@ export class MainComponent implements OnInit {
       console.log('alarms', x);
 
       let filteredAlarms = x.filter(x => {
-        return x.alarmsDTO.deviceName == this.deviceName;
+        return x.alarmsDTO.deviceName === this.deviceName;
       })
 
       filteredAlarms.forEach((x)=>{

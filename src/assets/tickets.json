@@ -21,7 +21,7 @@
         "_id": {
             "$oid": "5b43deb3f445c601ac30bee0"
         },
-        "counter": 0,
+        "counter": 50,
         "datetime": "2018-07-09T02",
         "hour": "2am",
         "originday": "2018-07-09T"

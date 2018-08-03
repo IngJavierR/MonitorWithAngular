@@ -6,37 +6,43 @@
                     "description": "Switch 2 - WS-C3850-48P - FAN 3",
                     "name": "Switch 2 - FAN 3",
                     "operationalStatus": "normal",
-                    "vendorEquipmentType": "cevFanCat3kCT57xxFan"
+                    "vendorEquipmentType": "cevFanCat3kCT57xxFan",
+                    "temp": 40
                 },
                 {
                     "description": "Switch 2 - WS-C3850-48P - FAN 2",
                     "name": "Switch 2 - FAN 2",
                     "operationalStatus": "normal",
-                    "vendorEquipmentType": "cevFanCat3kCT57xxFan"
+                    "vendorEquipmentType": "cevFanCat3kCT57xxFan",
+                    "temp": 40
                 },
                 {
                     "description": "Switch 1 - WS-C3850-48P - FAN 3",
                     "name": "Switch 1 - FAN 3",
                     "operationalStatus": "normal",
-                    "vendorEquipmentType": "cevFanCat3kCT57xxFan"
+                    "vendorEquipmentType": "cevFanCat3kCT57xxFan",
+                    "temp": 40
                 },
                 {
                     "description": "Switch 1 - WS-C3850-48P - FAN 1",
                     "name": "Switch 1 - FAN 1",
                     "operationalStatus": "normal",
-                    "vendorEquipmentType": "cevFanCat3kCT57xxFan"
+                    "vendorEquipmentType": "cevFanCat3kCT57xxFan",
+                    "temp": 40
                 },
                 {
                     "description": "Switch 2 - WS-C3850-48P - FAN 1",
                     "name": "Switch 2 - FAN 1",
                     "operationalStatus": "normal",
-                    "vendorEquipmentType": "cevFanCat3kCT57xxFan"
+                    "vendorEquipmentType": "cevFanCat3kCT57xxFan",
+                    "temp": 40
                 },
                 {
                     "description": "Switch 1 - WS-C3850-48P - FAN 2",
                     "name": "Switch 1 - FAN 2",
                     "operationalStatus": "normal",
-                    "vendorEquipmentType": "cevFanCat3kCT57xxFan"
+                    "vendorEquipmentType": "cevFanCat3kCT57xxFan",
+                    "temp": 40
                 }
             ]
         },
